@@ -26,12 +26,12 @@ import androidx.room.PrimaryKey
 data class Forageable(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
-    @ColumnInfo
+    @ColumnInfo(name="name")
     val name: String,
-    @ColumnInfo
+    @ColumnInfo(name="address")
     val address: String,
     @ColumnInfo(name = "in_season")
     val inSeason: Boolean,
-    @ColumnInfo
+    @ColumnInfo(name="notes")
     val notes: String?
 )

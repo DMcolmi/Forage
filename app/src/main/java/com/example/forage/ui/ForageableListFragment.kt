@@ -36,7 +36,7 @@ import com.example.forage.ui.viewmodel.ForageableViewModelFactory
  */
 class ForageableListFragment : Fragment() {
 
-    private val viewModel: ForageableViewModel by activityViewModels() {
+    private val viewModel: ForageableViewModel by activityViewModels {
         ForageableViewModelFactory(
             (activity?.application as BaseApplication).forageDatabase.getForageableDao()
         )

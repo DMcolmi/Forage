@@ -28,8 +28,8 @@ interface ForageableDao {
     @Query("select * from forageable_database order by id asc")
     fun getAllForageable(): Flow<List<Forageable>>
 
-    @Query("select * from forageable_database where id = :id")
-    fun getForageable(id: Long): Flow<Forageable>
+    @Query("select * from forageable_database where id = :idForageable")
+    fun getForageable(idForageable: Long): Flow<Forageable>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertForageable(forageable: Forageable)
